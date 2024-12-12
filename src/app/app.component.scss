@@ -1,0 +1,27 @@
+@use 'variables' as *;
+
+:host {
+    background-color: $bgGray;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 1rem;
+    max-width: 675px;
+}
+
+.Main {
+    flex: 1 1 auto;
+}
+
+.Footer {
+    &-watermark {
+        color: $lightGray;
+        display: block;
+        text-align: end;
+        margin-right: 1rem;
+
+        &:hover {
+            color: $darkGray;
+        }
+    }
+}

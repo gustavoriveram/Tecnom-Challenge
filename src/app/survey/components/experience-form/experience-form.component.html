@@ -1,0 +1,81 @@
+<header class="Header">
+    <p class="Header-title">Hola {{ "Nicolas" }}, gracias por confiar en nosotros.</p>
+</header>
+
+<main class="Main">
+  <p class="Main-title">¿Cómo calificaría su experiencia con nuestro servicio?</p>
+  <form [formGroup]="formGroup" class="Form">
+    <div class="Form-radios">
+      <div class="Radio">
+        <label for="1">1</label>
+        <input
+          type="radio"
+          name="experienceScore"
+          formControlName="experienceScore"
+          id="1"
+          value="1"
+          #radio1
+        />
+        <span class="Radio-text">Nada satisfecho</span>
+      </div>
+      <div class="Radio">
+        <label for="2">2</label>
+        <input
+          type="radio"
+          name="experienceScore"
+          formControlName="experienceScore"
+          id="2"
+          value="2"
+          #radio2
+        />
+        <span class="Radio-text">Insatisfecho</span>
+      </div>
+      <div class="Radio">
+        <label for="3">3</label>
+        <input
+          type="radio"
+          name="experienceScore"
+          formControlName="experienceScore"
+          id="3"
+          value="3"
+          #radio3
+        />
+        <span class="Radio-text">Indiferente</span>
+      </div>
+      <div class="Radio">
+        <label for="4">4</label>
+        <input
+          type="radio"
+          name="experienceScore"
+          formControlName="experienceScore"
+          id="4"
+          value="4"
+          #radio4
+        />
+        <span class="Radio-text">Satisfecho</span>
+      </div>
+      <div class="Radio">
+        <label for="5">5</label>
+        <input
+          type="radio"
+          name="experienceScore"
+          formControlName="experienceScore"
+          id="5"
+          value="5"
+          #radio5
+        />
+        <span class="Radio-text">Muy satisfecho</span>
+      </div>
+    </div>
+    <textarea
+      name="experienceDetail"
+      formControlName="experienceDetail"
+      id="experienceDetail"
+      placeholder="Contanos tu experiencia"
+    ></textarea>
+  </form>
+</main>
+
+<footer class="Footer">
+  <button class="Footer-formButton">ENVIAR</button>
+</footer>
