@@ -1,39 +1,53 @@
 @use "variables" as *;
 
 :host {
+  background-color: $white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  background-color: $white;
-  padding: 1rem 1.5rem;
-  max-width: 30em;
-  margin-inline: auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 1rem 1.25rem;
+  gap: 3vh;
 }
 
 .Header {
+  margin-bottom: 2rem;
   &-title {
+    border-bottom: 3px solid $blue;
     color: $darkerGray;
     font-size: 1.25rem;
     font-weight: 600;
-    text-align: center;
     padding-bottom: 0.5rem;
-    border-bottom: 3px solid $blue;
+    text-align: center;
+  }
+}
+
+.Main {
+  flex: 1 1 auto;
+  max-width: 24em;
+  
+  &-message {
+    color: $darkBlue;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-inline: auto;
+    max-width: 20rem;
+    text-align: center;
   }
 }
 
 .Footer {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  gap: 2vh;
 
   &-info {
+    align-items: center;
+    color: $darkerGray;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 0.25rem;
-    color: $darkerGray;
 
     &-title {
       font-size: 1.25rem;
@@ -47,19 +61,19 @@
   }
 
   &-buttons {
-    display: flex;
     align-items: center;
+    display: flex;
     gap: 2rem;
 
     button {
+      align-items: baseline;
       background-color: transparent;
       border-radius: 5rem;
-      padding: 0.25rem 1rem;
       display: flex;
-      align-items: center;
-      justify-content: center;
       gap: 0.5rem;
-      width: 8rem;
+      justify-content: center;
+      padding: 0.25rem 1rem;
+      width: 9rem;
     }
 
     &-whatsapp {
@@ -70,8 +84,8 @@
       }
 
       span {
-        font-weight: 400;
         color: $darkGray;
+        font-weight: 400;
       }
     }
 
@@ -79,23 +93,23 @@
       border: 1px solid $lightGray;
 
       span {
-        font-weight: 400;
         color: $darkGray;
+        font-weight: 400;
       }
     }
   }
 
   &-contact {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 0.75rem;
 
     &-item {
-      display: flex;
       align-items: center;
-      gap: 0.5rem;
+      display: flex;
       font-weight: 400;
+      gap: 0.5rem;
 
       span {
         color: $darkGray;
@@ -107,7 +121,7 @@
     }
 
     &-phone {
-        font-style: italic;
+      font-style: italic;
     }
   }
 }

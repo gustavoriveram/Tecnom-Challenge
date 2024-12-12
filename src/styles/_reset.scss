@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 *,
 *::before,
 *::after {
@@ -119,8 +121,8 @@ body {
 	font-family: system-ui, sans-serif;
 	font-size: 100%;
 	min-height: 100vh;
+    background-color: $bgGray;
 	font-smooth: always;
-	overflow: hidden;
 	hyphens: auto;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
