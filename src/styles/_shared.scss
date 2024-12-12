@@ -1,0 +1,18 @@
+.CustomIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+
+  &--phoneFlip {
+    background: url("/assets/icons/phone-flip.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &--gMaps {
+    background: url("/assets/icons/google-maps.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
