@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
@@ -9,8 +9,15 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 })
 export class ExperienceFormComponent {
 
+  onFormSubmit = output();
+
   formGroup = new FormGroup({
     experienceScore: new FormControl('', Validators.required),
     experienceDetail: new FormControl(''),
   })
+
+  handleSubmit(){
+    if(this.formGroup.invalid) return;
+    this.onFormSubmit.emit();
+  }
 }

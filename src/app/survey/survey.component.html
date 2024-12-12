@@ -1,15 +1,21 @@
 <header class="Header">
-  <h1 class="Header-title">TALLER MOTORS</h1>
+  <h1 class="Header-title">{{'TALLER MOTORS'}}</h1>
 </header>
 
 <main class="Main">
-    <survey-experience-form />
+  @if(showMessageView()){
+  <p class="Main-message">
+    ¡Gracias por compartir sus comentarios con nosotros!
+  </p>
+  }@else {
+  <survey-experience-form (onFormSubmit)="handleFormSubmit()" />
+  }
 </main>
 
 <footer class="Footer">
   <section class="Footer-info">
-    <span class="Footer-info-title">Taller Motors</span>
-    <span class="Footer-info-text">Address</span>
+    <span class="Footer-info-title">{{'Taller Motors'}}</span>
+    <span class="Footer-info-text">{{'Address'}}</span>
   </section>
   <section class="Footer-buttons">
     <!-- Buttons -->
