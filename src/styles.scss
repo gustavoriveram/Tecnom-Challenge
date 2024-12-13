@@ -2,3 +2,5 @@
 @use './styles/fonts';
 @use './styles/reset';
 @use './styles/shared';
+
+@import 'ngx-toastr/toastr';
