@@ -1,59 +1,45 @@
 # TecnomChallenge
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+Proyecto en Angular 19 que simula la automatización de un caso de uso específico dentro del área de postventa: las encuestas post-servicio.
 
-## Development server
+## Sobre Tecnom y el producto Boxes:
+Tecnom se dedica a ofrecer soluciones tecnológicas innovadoras que optimizan los procesos de negocio de sus empresas clientes. Uno de sus productos destacados es Boxes, una plataforma que se enfoca en mejorar la postventa mediante la automatización y gestión eficiente de servicios, lo que resulta en una experiencia superior para el cliente final.
 
-To start a local development server, run:
 
+## Features
+
+- Interfaz de usuario moderna y responsive
+- Construido con la última versión del framework Angular
+- Incluye ngx-toastr para notificaciones de toast
+- Estado de la aplicación basado en señales
+
+## Pre requisitos
+
+Antes de comenzar, asegurarse de tener instalado:
+- Node.js (versión LTS recomendada)
+- npm (viene con Node.js)
+- Angular CLI version 19.0.4 (`npm install -g @angular/cli`)
+
+## Instalación
+
+1. Clonar el repositorio:
 ```bash
-ng serve
+git clone [url-del-repositorio]
+cd tecnom-challenge
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+2. Instalar las dependencias:
 ```bash
-ng generate component component-name
+npm install
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Scripts disponibles
 
-```bash
-ng generate --help
-```
+- `npm start` - Iniciar el servidor de desarrollo
+- `npm run build` - Construir el proyecto para producción
+- `npm run watch` - Construir el proyecto y vigilar los cambios
+- `npm test` - Ejecutar pruebas unitarias con Karma (solo están las pruebas que vienen por defecto)
 
-## Building
+## License
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project is licensed under the MIT License - see the LICENSE file for details.
