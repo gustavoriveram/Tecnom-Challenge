@@ -3,7 +3,7 @@
 </header>
 
 <main class="Main">
-  <p class="Main-title">¿Cómo calificaría su experiencia con nuestro servicio?</p>
+  <p class="Main-title">{{question()}}</p>
   <form [formGroup]="formGroup" class="Form">
     <div class="Form-radios">
       <div class="Radio">
@@ -16,7 +16,7 @@
           value="1"
           #radio1
         />
-        <span class="Radio-text">Nada satisfecho</span>
+        <span class="Radio-text">{{scoresMapping()?.score_1}}</span>
       </div>
       <div class="Radio">
         <label for="2">2</label>
@@ -28,7 +28,7 @@
           value="2"
           #radio2
         />
-        <span class="Radio-text">Insatisfecho</span>
+        <span class="Radio-text">{{scoresMapping()?.score_2}}</span>
       </div>
       <div class="Radio">
         <label for="3">3</label>
@@ -40,7 +40,7 @@
           value="3"
           #radio3
         />
-        <span class="Radio-text">Indiferente</span>
+        <span class="Radio-text">{{scoresMapping()?.score_3}}</span>
       </div>
       <div class="Radio">
         <label for="4">4</label>
@@ -52,7 +52,7 @@
           value="4"
           #radio4
         />
-        <span class="Radio-text">Satisfecho</span>
+        <span class="Radio-text">{{scoresMapping()?.score_4}}</span>
       </div>
       <div class="Radio">
         <label for="5">5</label>
@@ -64,7 +64,7 @@
           value="5"
           #radio5
         />
-        <span class="Radio-text">Muy satisfecho</span>
+        <span class="Radio-text">{{scoresMapping()?.score_5}}</span>
       </div>
     </div>
     <textarea

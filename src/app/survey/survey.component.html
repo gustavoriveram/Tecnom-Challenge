@@ -1,5 +1,5 @@
 <header class="Header">
-  <h1 class="Header-title">{{'TALLER MOTORS'}}</h1>
+  <h1 class="Header-title">{{workshopName()?.toUpperCase()}}</h1>
 </header>
 
 <main class="Main">
@@ -14,14 +14,14 @@
 
 <footer class="Footer">
   <section class="Footer-info">
-    <span class="Footer-info-title">{{'Taller Motors'}}</span>
-    <span class="Footer-info-text">{{'Address'}}</span>
+    <span class="Footer-info-title">{{workshopName() | titlecase}}</span>
+    <span class="Footer-info-text">{{workshopAddress()?.split(',')?.at(0)}}</span>
   </section>
   <section class="Footer-buttons">
     <!-- Buttons -->
     <button class="Footer-buttons-whatsapp">
       <i class="fa-brands fa-whatsapp"></i>
-      <span>WhatsApp</span>
+      <span>Whatsapp</span>
     </button>
 
     <button class="Footer-buttons-map">
@@ -33,11 +33,11 @@
     <div class="Footer-contact-item">
       <!-- <i class="fa-solid fa-phone-flip"></i> -->
       <i class="CustomIcon CustomIcon--phoneFlip"></i>
-      <span class="Footer-contact-phone">(+54) 123 4567500</span>
+      <span class="Footer-contact-phone">{{workshopPhone()}}</span>
     </div>
     <div class="Footer-contact-item">
       <i class="fa-regular fa-envelope"></i>
-      <span>info&#64;tallermotors.com.ar</span>
+      <span>{{workshopEmail()}}</span>
     </div>
   </section>
 </footer>

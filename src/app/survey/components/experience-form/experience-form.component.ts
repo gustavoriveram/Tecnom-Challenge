@@ -1,5 +1,6 @@
-import { Component, output } from '@angular/core';
+import { Component, inject, output } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { WorkshopSurveyService } from '../../services/workshop-survey.service';
 
 @Component({
   selector: 'survey-experience-form',
@@ -9,7 +10,11 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 })
 export class ExperienceFormComponent {
 
+  workshopSurveyService = inject(WorkshopSurveyService);
   onFormSubmit = output();
+
+  question = this.workshopSurveyService.surveyQuestion;
+  scoresMapping = this.workshopSurveyService.surveyMapping;
 
   formGroup = new FormGroup({
     experienceScore: new FormControl('', Validators.required),
