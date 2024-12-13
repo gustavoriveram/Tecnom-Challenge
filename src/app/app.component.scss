@@ -31,7 +31,15 @@
     gap: 0.5rem;
 
     &:hover {
-      color: $darkGray;
+      .Footer-text {
+        color: $darkGray;
+      }
+
+      .Footer-icon {
+        background: url("/assets/brand/tecnom-logo-hover.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
     }
   }
 
@@ -43,9 +51,11 @@
     font-weight: 500;
   }
 
-  &-logo {
-    min-width: 3rem;
-    max-width: 4rem;
-    font-size: 0.75rem;
+  &-icon {
+    background: url("/assets/brand/tecnom-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 4rem;
+    height: 1.25rem;
   }
 }

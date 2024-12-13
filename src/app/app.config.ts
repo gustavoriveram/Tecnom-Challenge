@@ -1,5 +1,5 @@
-import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { ApplicationConfig, importProvidersFrom, provideExperimentalZonelessChangeDetection, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter, withViewTransitions } from '@angular/router';
 
 import { routes } from './app.routes';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
@@ -11,8 +11,8 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideAnimations(),
     provideToastr(),
-    provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes),
+    provideExperimentalZonelessChangeDetection(),
+    provideRouter(routes, withViewTransitions()),
     provideHttpClient(withInterceptors([httpInterceptor])),
   ],
 };
