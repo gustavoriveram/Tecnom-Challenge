@@ -1,11 +1,12 @@
-import { computed, inject, Injectable, signal } from '@angular/core';
-import { Workshop } from '../../shared/interfaces/workshop.interface';
-import { Survey } from '../interfaces/survey.interface';
+import { computed, inject, Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../environments/environment';
-import { rxResource, takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { rxResource } from '@angular/core/rxjs-interop';
 import { map, of } from 'rxjs';
-import { formatArgentinaPhoneNumber } from '../../shared/utils/phoneNumberFormatter';
+
+import { Workshop } from '@shared/interfaces/workshop.interface';
+import { formatArgentinaPhoneNumber } from '@shared/utils/phoneNumberFormatter';
+import { environment } from '@environments/environment';
+import { Survey } from '../interfaces/survey.interface';
 import { surveyMock, workshopsMock } from '../data/mock-data';
 
 @Injectable({
@@ -39,7 +40,7 @@ export class WorkshopSurveyService {
   );
 
   // SURVEY
-  private surveysUrl = `${environment.apiUrl}/boxes/config/encuesta`;
+  private surveysUrl = `${environment.apiUrl}/boxes/config/encuestas`;
 
   private surveyResource = rxResource({
     loader: () => {

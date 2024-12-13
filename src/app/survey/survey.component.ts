@@ -1,9 +1,9 @@
 import { Component, inject, signal } from '@angular/core';
-import { ExperienceFormComponent } from './components/experience-form/experience-form.component';
 import { Router } from '@angular/router';
-import { WorkshopSurveyService } from './services/workshop-survey.service';
 import { TitleCasePipe } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
+import { ExperienceFormComponent } from './components/experience-form/experience-form.component';
+import { WorkshopSurveyService } from './services/workshop-survey.service';
 
 @Component({
   imports: [ExperienceFormComponent, TitleCasePipe],
@@ -23,9 +23,13 @@ export default class SurveyComponent {
   workshopPhone = this.workshopSurveyService.workshopPhone;
 
   handleFormSubmit() {
+    // Send form: 
+    // if success display success toast and set showMessageView to true
+    // if error display error toast
+
     this.showMessageView.set(true);
     this.toastService.success('Comentarios enviados!', '', {
-      timeOut: 6000,
+      timeOut: 4500,
       progressBar: true,
       progressAnimation: 'increasing',
     });
