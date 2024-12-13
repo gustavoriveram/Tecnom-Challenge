@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://dev.tecnomcrm.com/api/v1/',
+    apiUrl: 'https://dev.tecnomcrm.com/api/v1',
 };
